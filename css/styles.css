@@ -58,15 +58,19 @@ Tabla de contenidos:
 body{
     font-family:var(--font-family);
     font-size: 16px;
-}
-main{
     width:100vw;
     height:100vh;
     overflow: hidden;
+    min-height: 320px;
+}
+main{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--neut-White);
+   
     
 }
 .card{
@@ -217,10 +221,15 @@ i{
 }
 
 @media (max-width:768px){
-    main{  
+    body{
+        
         width: 100%;
+        min-width: 320px;
+    }
+    
+    main{  
         padding: 2rem;
-        overflow: auto;
+        overflow-y: scroll;
         justify-content: center;
         align-items: flex-start;
         transition: all 1s ease-out ;
@@ -239,6 +248,7 @@ i{
         width: 100%;
         border-radius: 0 0 20px 20px;
         transition: all 0.3s ease-out ;
+        
     }
     .card__resumen{
         width: 100%;
