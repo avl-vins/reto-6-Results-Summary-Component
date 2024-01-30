@@ -1,0 +1,248 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+
+
+/* ----- Variables ----- */
+:root {
+    --font-family:'Hanken Grotesk', sans-serif;
+    /* ### Primarios */
+    --primary-Light-red:hsl(0, 100%, 67%);
+    --primary-Orangey-yellow: hsl(39,100%, 56%);
+    --primary-Green-teal:hsl(166, 100%, 37%);
+    --primary-Cobalt-blue:hsl(234, 85%, 45%);
+
+
+    --primaryOPa-Light-red:rgba(255, 87, 87,.1);
+    --primaryOPa-Orangey-yellow: rgba(255, 176, 31,.1);
+    --primaryOPa-Green-teal:rgba(0, 189, 145,.1);
+    --primaryOPa-Cobalt-blue:rgba(17, 37, 212,.1);
+
+    /* ## Gradientes */
+
+    --grad-Light-slate-blue-background: hsl(252, 100%, 67%);
+    --grad-Light-royal-blue-background: hsl(241, 81%, 54%);
+    --grad-Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --grad-Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* ### Neutrales */
+    --neut-White: hsl(0, 0%, 100%);
+    --neut-Pale-blue: hsl(221, 100%, 96%);
+    --neut-Light-lavender: hsl(241, 100%, 89%);
+    --neut-Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    font-family:var(--font-family);
+    font-size: 16px;
+}
+main{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neut-White);
+    
+}
+.card{
+    width: 500px;
+    height: auto;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 60px -40px var(--grad-Light-royal-blue-background);
+}
+.card__resultado{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(var(--grad-Light-slate-blue-background),var(--grad-Light-royal-blue-background));
+    color: var(--neut-White);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+.header__titulo{
+    margin: 0;
+    padding: 0;
+    font-size: 1.125rem;
+    color: var(--neut-Pale-blue);
+}
+.body__circulo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--grad-Violet-blue-circle),var(--grad-Persian-blue-circle));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+.body__circulo__parte{
+    font-size: 3rem;
+    margin: 0;
+
+}
+.body__circulo__todo{
+    color: var(--neut-Pale-blue);
+    font-weight: 500;
+    opacity: .6;
+}
+.body__calificacion{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.footer__texto{
+    text-align: center;
+    font-size: .875rem;
+    color: var(--neut-Pale-blue);
+    opacity: .6;
+}
+
+.card__resumen{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--neut-White);
+
+}
+.resumen__header__titulo{
+    color:var(--neut-Dark-gray-blue);
+    font-size: 1.125rem;
+    margin: 0;
+    
+}
+.card__resumen__body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.body__item{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding:1rem;
+    font-size: .875rem;
+    z-index: 1;
+}
+.body__item:nth-child(1){
+    background-color:var(--primaryOPa-Light-red)
+    
+}
+.body__item:nth-child(2){
+    background-color: var(--primaryOPa-Orangey-yellow);
+}
+.body__item:nth-child(3){
+    background-color: var(--primaryOPa-Green-teal);
+}
+.body__item:nth-child(4){
+    background-color: var(--primaryOPa-Cobalt-blue);
+}
+
+.body__item:nth-child(1) .item__opcion{
+    z-index: 100;
+    color: var(--primary-Light-red);
+}
+.body__item:nth-child(2) .item__opcion{
+    color: var(--primary-Orangey-yellow);
+}
+.body__item:nth-child(3) .item__opcion{
+    color: var(--primary-Green-teal);
+}
+.body__item:nth-child(4) .item__opcion{
+    color: var(--primary-Cobalt-blue);
+}
+i{
+    padding: 0 5px 0 0;
+}
+.item__resultado{
+    color: var(--neut-Dark-gray-blue);
+    font-weight: 800;
+}
+.item__resultado span{
+    color: var(--neut-Dark-gray-blue);
+    opacity: 50%;
+    
+   
+}
+
+.footer__boton{
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    background-color: var(--neut-Dark-gray-blue);
+    color: var(--neut-White);
+    border: none;
+    font-weight: 700;
+
+}
+.footer__boton:hover{
+    
+    cursor: pointer;
+    border: none;
+    background-image: linear-gradient(var(--grad-Light-slate-blue-background),var(--grad-Light-royal-blue-background));
+
+}
+.footer__boton:active{
+
+}
+
+@media (max-width:768px){
+    main{  
+        width: 100%;
+        padding: 2rem;
+        overflow: auto;
+        justify-content: center;
+        align-items: flex-start;
+        transition: all 1s ease-out ;
+        
+    }
+    .card{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        /* flex-direction: column;
+         justify-content: center;
+         align-items: center;  
+         transition: all 0.3s ease-out ; */
+    }
+    .card__resultado{
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        transition: all 0.3s ease-out ;
+    }
+    .card__resumen{
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        transition: all 0.3s ease-out ;
+    }
+}

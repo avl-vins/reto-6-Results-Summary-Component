@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nombre del autor">
+    <meta name="description" content="Descripcion del proyecto">
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Results Summary Component</title>
+</head>
+<body>
+    <!-- Marcado HTML -->
+    <main>
+        <article class="card">
+            <section class="card__resultado">
+                <div class="card__resultado__header">
+                    <h1 class="header__titulo">Your Result</h1>
+                </div>
+                <div class="card__resultado__body">
+                    <div class="body__circulo">
+                        <h2 class="body__circulo__parte">76</h2>
+                        <small class="body__circulo__todo">of 100</small>                    
+                    </div>
+                    <h3 class="body__calificacion">Great </h3>
+                </div>
+                <div class="card__resultado__footer">
+                    <p class="footer__texto">You scored higher than 65% of the people who 
+                        have taken these tests. </p>
+                </div>
+                
+            </section>
+            <section class="card__resumen">
+                <div class="card__resumen__header">
+                    <h2 class="resumen__header__titulo">Summary </h2>
+                </div>
+                <div class="card__resumen__body">
+                    <div class="body__item">
+                        <div class="item__opcion">
+                            <i class="fa-solid fa-bolt"></i> <span class="option__texto">Reaction</span>
+                        </div>
+                        <div class="item__resultado">
+                             80 <span>/ 100 </span>
+                        </div>
+                    </div>
+                    <div class="body__item">
+                        <div class="item__opcion">
+                            <i class="fa-solid fa-brain"></i><span class="option__texto">Memory</span>
+                        </div>
+                        <div class="item__resultado">
+                             92 <span>/ 100 </span>
+                        </div>
+                    </div>
+                    <div class="body__item">
+                        <div class="item__opcion">
+                            <i class="fa-regular fa-comment-dots"></i><span class="option__texto">Verbal</span>
+                        </div>
+                        <div class="item__resultado">
+                             61 <span>/ 100 </span>
+                        </div>
+                    </div>
+                    <div class="body__item">
+                        <div class="item__opcion">
+                            <i class="fa-regular fa-eye"></i><span class="option__texto">Visual</span>
+                        </div>
+                        <div class="item__resultado">
+                             72 <span>/ 100 </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card__resumen__footer">
+                    <button class="footer__boton">Continue</button>
+                </div>
+
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
